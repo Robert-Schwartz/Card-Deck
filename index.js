@@ -15,3 +15,18 @@ const values = [
 	"K",
 ];
 
+function getDeck()
+{
+	var deck = new Array();
+
+	for(var i = 0; i < suits.length; i++)
+	{
+		for(var x = 0; x < cards.length; x++)
+		{
+			var card = {Value: cards[x], Suit: suits[i]};
+			deck.push(card);
+		}
+	}
+
+	return deck;
+}
