@@ -1,12 +1,20 @@
+
+body {
+	background-color: slategray;
+}
+
 .deck {
 	width: 50%;
-	margin: 20px auto;
+	margin: 15px auto;
 	background: dodgerblue;
 	border: solid 10px black;
 	padding: 10px;
 	border-radius: 10px;
 	text-align: center;
 	color: white;
+	font-size: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	box-shadow: 2px 2px 8px black;
 }
 
 .card {
@@ -19,6 +27,8 @@
 	text-align: center;
 	color: black;
 	margin: 3px;
+	font-weight: bold;
+	box-shadow: 2px 2px 8px black;
 }
 
 .btn {
@@ -27,11 +37,17 @@
 	border-radius: 30px;
 	margin: 10px;
 	display: inline-block;
+	font-size: 30px;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	box-shadow: 2px 2px 8px black;
 }
 
 .card .value {
 	font-size: 15pt;
 	font-family: sans-serif;
+
 }
 
 .card .suit {
@@ -42,6 +58,7 @@
 
 .card .diamonds {
 	background-position-y: 100px;
+
 }
 
 .card .hearts {
