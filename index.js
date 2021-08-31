@@ -1,3 +1,18 @@
+const cards = [
+	"A",
+	"2",
+	"3",
+	"4",
+	"5",
+	"6",
+	"7",
+	"8",
+	"9",
+	"10",
+	"J",
+	"Q",
+	"K",
+];
 const suits = ["spades", "diamonds", "clubs", "hearts"];
 const values = [
 	"A",
@@ -45,10 +60,29 @@ function shuffle() {
 	renderDeck();
 }
 
-//Load Functions
+function renderDeck() {
+	document.getElementById("deck").innerHTML = "";
+	for (var i = 0; i < deck.length; i++) {
+		var card = document.createElement("div");
+		var value = document.createElement("div");
+		var suit = document.createElement("div");
+		card.className = "card";
+		value.className = "value";
+		suit.className = "suit " + deck[i].Suit;
+
+		value.innerHTML = deck[i].Value;
+		card.appendChild(value);
+		card.appendChild(suit);
+
+		document.getElementById("deck").appendChild(card);
+	}
+}
+
+// Load Functions
 function load() {
 	deck = getDeck();
 	shuffle();
+	renderDeck();
 }
 
 window.onload = load;
